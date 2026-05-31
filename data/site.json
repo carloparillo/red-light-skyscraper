@@ -72,6 +72,15 @@
       },
       "youtubeId": "vrP_F48mlWw",
       "release": "Matisse"
+    },
+    {
+      "title": "Yugen",
+      "type": {
+        "en": "Official video",
+        "it": "Videoclip ufficiale"
+      },
+      "youtubeId": "S7OOOBN_Cr0",
+      "release": "Yugen"
     }
   ],
   "releases": [
@@ -284,7 +293,12 @@
       "techTitle": "Technical info",
       "techText": "Set duration: 45–60 minutes. Standard four-piece rock band setup. Visual projections and synced backdrops. Full tech rider available upon request.",
       "credits": "Photo credits: Senio Firmati, Luca Chiandoni, Matt Jarvis, Mattia Cialoni, Carlo Parillo.",
-      "rights": "All rights reserved."
+      "rights": "All rights reserved.",
+      "shopIntro": "Selected records and merch. Purchases are handled through Bandcamp.",
+      "shopCta": "Open product on Bandcamp",
+      "quoteProg": "“A moody multi-dimensional single… creating an atmosphere of warm ambience and musical dynamism… evoking the work of one of the giants of modern art.”",
+      "quoteRepubblica": "“A post-rock driven by emotions with a strong narrative impact, which acts like an inner cosmic trip through our soul and thoughts.”",
+      "quoteRockit": "“Still The Echo is pleasant to listen to, in which you can feel a thick sound, obtained with effort, work and heart.”"
     },
     "it": {
       "metaTitle": "Red Light Skyscraper — Post-rock strumentale da Siena",
@@ -330,7 +344,12 @@
       "techTitle": "Info tecniche",
       "techText": "Durata set: 45–60 minuti. Formazione rock a quattro elementi. Proiezioni visuali e fondali sincronizzati. Full tech rider su richiesta.",
       "credits": "Crediti foto: Senio Firmati, Luca Chiandoni, Matt Jarvis, Mattia Cialoni, Carlo Parillo.",
-      "rights": "Tutti i diritti riservati."
+      "rights": "Tutti i diritti riservati.",
+      "shopIntro": "Una selezione di dischi e merch. Gli acquisti vengono gestiti tramite Bandcamp.",
+      "shopCta": "Apri su Bandcamp",
+      "quoteProg": "“Un singolo dalle atmosfere sfaccettate… capace di creare un’atmosfera calda e dinamica… evocando il lavoro di uno dei giganti dell’arte moderna.”",
+      "quoteRepubblica": "“Un post-rock guidato dalle emozioni con un forte impatto narrativo, che agisce come un viaggio cosmico interiore attraverso la nostra anima e i nostri pensieri.”",
+      "quoteRockit": "“Still The Echo è piacevole da ascoltare, si percepisce un suono denso, ottenuto con impegno, lavoro e cuore.”"
     }
   }
 }

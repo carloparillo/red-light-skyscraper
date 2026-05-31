@@ -57,3 +57,10 @@ When the final domain is purchased:
    `redlightskyscraper.com`
 2. Configure DNS records according to GitHub Pages instructions.
 3. Set the domain in **Settings → Pages → Custom domain**.
+
+
+## Update notes
+- Hero logo changed to visible white/red version.
+- Added Yugen YouTube video.
+- Added visual merch/shop section linking to Bandcamp.
+- Added and prioritized Prog quote in Press & Booking.
