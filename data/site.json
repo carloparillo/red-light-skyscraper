@@ -298,7 +298,9 @@
       "shopCta": "Open product on Bandcamp",
       "quoteProg": "“A moody multi-dimensional single… creating an atmosphere of warm ambience and musical dynamism… evoking the work of one of the giants of modern art.”",
       "quoteRepubblica": "“A post-rock driven by emotions with a strong narrative impact, which acts like an inner cosmic trip through our soul and thoughts.”",
-      "quoteRockit": "“Still The Echo is pleasant to listen to, in which you can feel a thick sound, obtained with effort, work and heart.”"
+      "quoteRockit": "“Still The Echo is pleasant to listen to, in which you can feel a thick sound, obtained with effort, work and heart.”",
+      "albumsLabel": "Albums",
+      "singlesLabel": "Singles"
     },
     "it": {
       "metaTitle": "Red Light Skyscraper — Post-rock strumentale da Siena",
@@ -349,7 +351,9 @@
       "shopCta": "Apri su Bandcamp",
       "quoteProg": "“Un singolo dalle atmosfere sfaccettate… capace di creare un’atmosfera calda e dinamica… evocando il lavoro di uno dei giganti dell’arte moderna.”",
       "quoteRepubblica": "“Un post-rock guidato dalle emozioni con un forte impatto narrativo, che agisce come un viaggio cosmico interiore attraverso la nostra anima e i nostri pensieri.”",
-      "quoteRockit": "“Still The Echo è piacevole da ascoltare, si percepisce un suono denso, ottenuto con impegno, lavoro e cuore.”"
+      "quoteRockit": "“Still The Echo è piacevole da ascoltare, si percepisce un suono denso, ottenuto con impegno, lavoro e cuore.”",
+      "albumsLabel": "Album",
+      "singlesLabel": "Singoli"
     }
   }
 }

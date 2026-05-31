@@ -65,18 +65,31 @@ function renderFeaturedTracks() {
   `).join("");
 }
 
-function renderDiscography() {
-  const grid = $("#discography-grid");
-  if (!grid) return;
-  grid.innerHTML = state.site.releases
-    .filter(r => r.kind !== "featured")
-    .map(rel => `
+function releaseCard(rel) {
+  return `
     <article class="release-card reveal">
       <img src="${rel.artwork}" alt="${rel.title} artwork" loading="lazy">
       <h4>${rel.title}</h4>
-      <p>${releaseKind(rel.kind)} · ${rel.year}</p>
+      <p>${releaseKind(rel.kind)}${rel.year ? ` · ${rel.year}` : ""}</p>
     </article>
-  `).join("");
+  `;
+}
+
+function renderDiscography() {
+  const albumGrid = $("#album-grid");
+  const singlesGrid = $("#singles-grid");
+  if (albumGrid) {
+    albumGrid.innerHTML = state.site.releases
+      .filter(r => r.kind === "album")
+      .map(releaseCard)
+      .join("");
+  }
+  if (singlesGrid) {
+    singlesGrid.innerHTML = state.site.releases
+      .filter(r => r.kind === "single")
+      .map(releaseCard)
+      .join("");
+  }
 }
 
 function renderVideos() {
@@ -101,6 +114,7 @@ function renderVideos() {
 
   $$(".video-load").forEach(button => {
     button.addEventListener("click", () => {
+      stopSpotifyPlayer();
       const id = button.dataset.youtube;
       const frame = document.createElement("iframe");
       frame.src = `https://www.youtube-nocookie.com/embed/${id}?autoplay=1&rel=0`;
@@ -179,15 +193,38 @@ function setupNav() {
   });
 }
 
-function setupSpotify() {
+function createSpotifyButton() {
+  const button = document.createElement("button");
+  button.className = "btn small";
+  button.id = "load-spotify";
+  button.type = "button";
+  button.textContent = "Load Spotify player";
+  button.addEventListener("click", loadSpotifyPlayer);
+  return button;
+}
+
+function loadSpotifyPlayer() {
   const btn = $("#load-spotify");
   const mount = $("#spotify-embed");
-  if (!btn || !mount) return;
+  if (!mount) return;
+  mount.innerHTML = `<iframe loading="lazy" src="https://open.spotify.com/embed/artist/5ToVVNQTLFd3Tqo6Dfzh6M?utm_source=generator" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>`;
+  if (btn) btn.remove();
+}
 
-  btn.addEventListener("click", () => {
-    mount.innerHTML = `<iframe loading="lazy" src="https://open.spotify.com/embed/artist/5ToVVNQTLFd3Tqo6Dfzh6M?utm_source=generator" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>`;
-    btn.remove();
-  });
+function stopSpotifyPlayer() {
+  const mount = $("#spotify-embed");
+  const existingButton = $("#load-spotify");
+  if (!mount || (!mount.querySelector("iframe") && existingButton)) return;
+  mount.innerHTML = "";
+  if (!existingButton) {
+    mount.insertAdjacentElement("beforebegin", createSpotifyButton());
+  }
+}
+
+function setupSpotify() {
+  const btn = $("#load-spotify");
+  if (!btn) return;
+  btn.addEventListener("click", loadSpotifyPlayer);
 }
 
 function setupArchiveFilter() {
