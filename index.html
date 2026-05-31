@@ -1,0 +1,221 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Red Light Skyscraper — Instrumental Post-Rock from Siena, Italy</title>
+  <meta name="description" content="Official website of Red Light Skyscraper: instrumental post-rock soundscapes, live audiovisual performances, music, videos, tour archive, press kit and booking.">
+  <meta name="theme-color" content="#050505">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Red Light Skyscraper">
+  <meta property="og:description" content="Instrumental post-rock soundscapes from Siena, Italy.">
+  <meta property="og:image" content="assets/images/live/hero.webp">
+  <link rel="icon" href="assets/images/logos/symboldark.webp">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header" data-ui="header">
+    <a class="brand" href="#top" aria-label="Red Light Skyscraper home">
+      <img src="assets/images/logos/symboldark.webp" alt="Red Light Skyscraper symbol">
+    </a>
+    <button class="nav-toggle" aria-expanded="false" aria-controls="site-nav">Menu</button>
+    <nav id="site-nav" class="site-nav" aria-label="Primary navigation">
+      <a href="#experience" data-i18n="nav.experience">Experience</a>
+      <a href="#music" data-i18n="nav.music">Music</a>
+      <a href="#videos" data-i18n="nav.videos">Videos</a>
+      <a href="#live" data-i18n="nav.live">Live</a>
+      <a href="#shop" data-i18n="nav.shop">Shop</a>
+      <a href="#about" data-i18n="nav.about">About</a>
+      <a href="#press" data-i18n="nav.press">Press</a>
+    </nav>
+    <div class="lang-switch" aria-label="Language selector">
+      <button class="lang-btn active" data-lang="en" type="button">EN</button>
+      <button class="lang-btn" data-lang="it" type="button">IT</button>
+    </div>
+  </header>
+
+  <main id="main">
+    <section id="top" class="hero" aria-label="Hero">
+      <div class="hero-bg" data-bg="hero"></div>
+      <div class="hero-overlay"></div>
+      <div class="hero-content">
+        <img class="hero-logo" src="assets/images/logos/maindark.webp" alt="Red Light Skyscraper">
+        <p class="eyebrow" data-i18n="heroKicker">Instrumental post-rock soundscapes from Siena, Italy</p>
+        <h1 data-i18n="heroTitle">A cinematic live experience in sound and image.</h1>
+        <p class="hero-copy" data-i18n="heroText">Red Light Skyscraper blends cinematic tension, explosive dynamics and emotional melodies into wordless journeys shaped by sound, light and visuals.</p>
+        <div class="cta-row">
+          <a class="btn primary" href="#music" data-i18n="ctaListen">Listen</a>
+          <a class="btn" href="#videos" data-i18n="ctaWatch">Watch</a>
+          <a class="btn ghost" href="#press" data-i18n="ctaBooking">Booking</a>
+        </div>
+      </div>
+      <div class="scroll-indicator" aria-hidden="true"></div>
+    </section>
+
+    <section id="experience" class="section split">
+      <div class="section-media reveal">
+        <img src="assets/images/live/experience.webp" alt="Red Light Skyscraper live performance with blue lights" loading="lazy">
+      </div>
+      <div class="section-copy reveal">
+        <p class="section-kicker">01</p>
+        <h2 data-i18n="experienceTitle">The experience</h2>
+        <p data-i18n="experienceText">Each performance is conceived as a journey. The band moves through instrumental post-rock, visual projections and synced backdrops, turning the stage into a living cinematic space.</p>
+      </div>
+    </section>
+
+    <section id="music" class="section">
+      <div class="section-head reveal">
+        <p class="section-kicker">02</p>
+        <h2 data-i18n="musicTitle">Music</h2>
+        <p data-i18n="musicIntro">One album, a sequence of singles and a new concept record in progress.</p>
+      </div>
+
+      <div class="music-layout">
+        <div class="feature-card reveal">
+          <img src="assets/images/releases/still-the-echo.webp" alt="Still the Echo artwork" loading="lazy">
+          <div>
+            <p class="tag">Album · 2017</p>
+            <h3>Still the Echo</h3>
+            <p>Instrumental post-rock soundscapes built around tension, release and emotional dynamics.</p>
+            <div class="inline-links">
+              <a href="https://redlightskyscraper.bandcamp.com/album/red-light-skyscraper" target="_blank" rel="noopener">Bandcamp</a>
+              <a href="https://open.spotify.com/intl-it/artist/5ToVVNQTLFd3Tqo6Dfzh6M?si=MimyScSXRUW72g5lnW68TQ" target="_blank" rel="noopener">Spotify</a>
+              <a href="https://music.apple.com/it/artist/red-light-skyscraper/1448883354" target="_blank" rel="noopener">Apple Music</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="player-card reveal">
+          <div class="player-top">
+            <span class="red-dot"></span>
+            <span data-i18n="featuredTracks">Featured tracks</span>
+          </div>
+          <div id="featured-tracks" class="track-list"></div>
+          <button class="btn small" id="load-spotify" type="button">Load Spotify player</button>
+          <div id="spotify-embed" class="embed-placeholder" aria-live="polite"></div>
+        </div>
+      </div>
+
+      <div class="section-subhead reveal">
+        <h3 data-i18n="discography">Discography</h3>
+      </div>
+      <div id="discography-grid" class="release-grid"></div>
+    </section>
+
+    <section id="videos" class="section">
+      <div class="section-head reveal">
+        <p class="section-kicker">03</p>
+        <h2 data-i18n="videosTitle">Videos</h2>
+        <p data-i18n="videosIntro">Official videos and live footage from the audiovisual side of the project.</p>
+      </div>
+      <div id="video-grid" class="video-grid"></div>
+    </section>
+
+    <section id="live" class="section">
+      <div class="section-head reveal">
+        <p class="section-kicker">04</p>
+        <h2 data-i18n="liveTitle">Live</h2>
+        <p data-i18n="liveIntro">Selected shows and a complete archive of live performances.</p>
+      </div>
+      <div class="live-hero reveal">
+        <img src="assets/images/live/livewide.webp" alt="Red Light Skyscraper on stage with lights and crowd" loading="lazy">
+      </div>
+      <h3 class="subsection-title reveal" data-i18n="selectedShows">Selected live moments</h3>
+      <div id="live-highlights" class="highlight-grid"></div>
+
+      <div class="archive-panel reveal">
+        <div class="archive-head">
+          <h3 data-i18n="archive">Full live archive</h3>
+          <input id="archive-filter" type="search" data-i18n-placeholder="filterPlaceholder" placeholder="Filter by year, city, venue or country">
+        </div>
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr><th>Date</th><th>Venue / Event</th><th>City</th><th>Region / Country</th></tr>
+            </thead>
+            <tbody id="concert-table"></tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <section id="shop" class="section split reverse">
+      <div class="section-copy reveal">
+        <p class="section-kicker">05</p>
+        <h2 data-i18n="shopTitle">Shop</h2>
+        <p data-i18n="shopText">Music, records and merch are available through Bandcamp.</p>
+        <a class="btn primary" href="https://redlightskyscraper.bandcamp.com/album/red-light-skyscraper" target="_blank" rel="noopener" data-i18n="shopButton">Go to Bandcamp shop</a>
+      </div>
+      <div class="section-media reveal">
+        <img src="assets/images/releases/eventide.webp" alt="Eventide artwork" loading="lazy">
+      </div>
+    </section>
+
+    <section id="about" class="section split">
+      <div class="section-media reveal">
+        <img src="assets/images/live/about.webp" alt="Red Light Skyscraper band portrait" loading="lazy">
+      </div>
+      <div class="section-copy reveal">
+        <p class="section-kicker">06</p>
+        <h2 data-i18n="aboutTitle">About</h2>
+        <p data-i18n="aboutText">Formed in 2015 among the Tuscan hills, Red Light Skyscraper is an instrumental post-rock band blending cinematic tension, explosive dynamics and emotional melodies. The project stems from the fusion of diverse musical backgrounds, evolving into a wordless language that conveys emotional depth, inner journeys and urban atmospheres. With one album and over ten singles released, the band has performed at acclaimed events such as CONCRETION Festival and opened the debut tour of Calibro 35 plays Morricone. The band is now working on a new concept album born from an artistic collaboration with a Syrian photographer from Damascus, a dialogue between sound and imagery exploring memory, displacement and resilience.</p>
+        <h3 data-i18n="lineup">Line-up</h3>
+        <ul class="lineup">
+          <li>Carlo Parillo — guitar, keys, voice</li>
+          <li>Jacopo Palumbo — guitar</li>
+          <li>Mattia Cella — bass</li>
+          <li>Matteo Vispo — drums</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="press" class="section press-section">
+      <div class="section-head reveal">
+        <p class="section-kicker">07</p>
+        <h2 data-i18n="pressTitle">Press & booking</h2>
+        <p data-i18n="pressText">Contact Red Light Skyscraper for festivals, clubs and special events across Europe and beyond.</p>
+      </div>
+      <div class="press-grid">
+        <div class="quote-card reveal">
+          <blockquote>“A post-rock driven by emotions with a strong narrative impact.”</blockquote>
+          <cite>la Repubblica</cite>
+        </div>
+        <div class="quote-card reveal">
+          <blockquote>“Still The Echo is pleasant to listen to, in which you can feel a thick sound.”</blockquote>
+          <cite>Rockit</cite>
+        </div>
+        <div class="contact-card reveal">
+          <h3>Booking / Press</h3>
+          <a class="mail" href="mailto:redlight.skyscraper@gmail.com">redlight.skyscraper@gmail.com</a>
+          <div class="download-row">
+            <a class="btn small" href="assets/docs/2025_RLS_PressKit_EN_LR_Web.pdf" download data-i18n="downloadEn">Download press kit EN</a>
+            <a class="btn small" href="assets/docs/2025_RLS_Kit_IT_BassaRisoluzione_Web.pdf" download data-i18n="downloadIt">Download press kit IT</a>
+          </div>
+          <h4 data-i18n="techTitle">Technical info</h4>
+          <p data-i18n="techText">Set duration: 45–60 minutes. Standard four-piece rock band setup. Visual projections and synced backdrops. Full tech rider available upon request.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <img src="assets/images/logos/symboldark.webp" alt="" aria-hidden="true">
+    <div class="footer-links">
+      <a href="https://redlightskyscraper.bandcamp.com/album/red-light-skyscraper" target="_blank" rel="noopener">Bandcamp</a>
+      <a href="https://open.spotify.com/intl-it/artist/5ToVVNQTLFd3Tqo6Dfzh6M?si=MimyScSXRUW72g5lnW68TQ" target="_blank" rel="noopener">Spotify</a>
+      <a href="https://www.instagram.com/redlight_skyscraper/" target="_blank" rel="noopener">Instagram</a>
+      <a href="https://www.facebook.com/RedLightSkyscraper/" target="_blank" rel="noopener">Facebook</a>
+      <a href="https://www.youtube.com/c/redlightskyscraper" target="_blank" rel="noopener">YouTube</a>
+      <a href="https://soundcloud.com/red-light-skyscraper" target="_blank" rel="noopener">SoundCloud</a>
+      <a href="https://www.tiktok.com/@redlightskyscraper" target="_blank" rel="noopener">TikTok</a>
+      <a href="https://linktr.ee/redlightskyscraper" target="_blank" rel="noopener">Linktree</a>
+    </div>
+    <p data-i18n="credits">Photo credits: Senio Firmati, Luca Chiandoni, Matt Jarvis, Mattia Cialoni, Carlo Parillo.</p>
+    <p>© <span id="year"></span> Red Light Skyscraper. <span data-i18n="rights">All rights reserved.</span></p>
+  </footer>
+
+  <script src="assets/js/app.js"></script>
+</body>
+</html>

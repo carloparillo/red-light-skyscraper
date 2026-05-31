@@ -1,0 +1,336 @@
+{
+  "defaultLang": "en",
+  "brand": {
+    "name": "Red Light Skyscraper",
+    "email": "redlight.skyscraper@gmail.com",
+    "location": "Siena, Italy"
+  },
+  "links": {
+    "bandcamp": "https://redlightskyscraper.bandcamp.com/album/red-light-skyscraper",
+    "spotify": "https://open.spotify.com/intl-it/artist/5ToVVNQTLFd3Tqo6Dfzh6M?si=MimyScSXRUW72g5lnW68TQ",
+    "instagram": "https://www.instagram.com/redlight_skyscraper/",
+    "facebook": "https://www.facebook.com/RedLightSkyscraper/",
+    "youtube": "https://www.youtube.com/c/redlightskyscraper",
+    "linktree": "https://linktr.ee/redlightskyscraper",
+    "apple": "https://music.apple.com/it/artist/red-light-skyscraper/1448883354",
+    "soundcloud": "https://soundcloud.com/red-light-skyscraper",
+    "tiktok": "https://www.tiktok.com/@redlightskyscraper"
+  },
+  "assets": {
+    "logos": {
+      "mainDark": "assets/images/logos/maindark.webp",
+      "mainDarkAlt": "assets/images/logos/maindarkalt.webp",
+      "symbolDark": "assets/images/logos/symboldark.webp",
+      "symbolLight": "assets/images/logos/symbollight.webp",
+      "head": "assets/images/logos/head.webp"
+    },
+    "images": {
+      "hero": "assets/images/live/hero.webp",
+      "experience": "assets/images/live/experience.webp",
+      "liveWide": "assets/images/live/livewide.webp",
+      "about": "assets/images/live/about.webp",
+      "visuals": "assets/images/live/visuals.webp",
+      "music": "assets/images/live/music.webp",
+      "press": "assets/images/live/press.webp",
+      "stageBW": "assets/images/live/stagebw.webp",
+      "lights": "assets/images/live/lights.webp"
+    },
+    "releases": {
+      "still-the-echo": "assets/images/releases/still-the-echo.webp",
+      "thermopylae": "assets/images/releases/thermopylae.webp",
+      "under-the-sea": "assets/images/releases/under-the-sea.webp",
+      "bonne-charogne": "assets/images/releases/bonne-charogne.webp",
+      "im-the-prince": "assets/images/releases/im-the-prince.webp",
+      "4-am": "assets/images/releases/4-am.webp",
+      "matisse": "assets/images/releases/matisse.webp",
+      "italian-soccer": "assets/images/releases/italian-soccer.webp",
+      "true-north": "assets/images/releases/true-north.webp",
+      "eventide": "assets/images/releases/eventide.webp",
+      "tomatos-tower": "assets/images/releases/tomatos-tower.webp",
+      "forest": "assets/images/releases/forest.webp",
+      "desert": "assets/images/releases/desert.webp",
+      "ocean": "assets/images/releases/ocean.webp"
+    },
+    "presskitEn": "assets/docs/2025_RLS_PressKit_EN_LR_Web.pdf",
+    "presskitIt": "assets/docs/2025_RLS_Kit_IT_BassaRisoluzione_Web.pdf"
+  },
+  "videos": [
+    {
+      "title": "Forest",
+      "type": {
+        "en": "Official video",
+        "it": "Videoclip ufficiale"
+      },
+      "youtubeId": "9czGFbYvlEA",
+      "release": "Forest"
+    },
+    {
+      "title": "Matisse",
+      "type": {
+        "en": "Live video",
+        "it": "Videoclip live"
+      },
+      "youtubeId": "vrP_F48mlWw",
+      "release": "Matisse"
+    }
+  ],
+  "releases": [
+    {
+      "title": "Still the Echo",
+      "kind": "album",
+      "year": "2017",
+      "artwork": "assets/images/releases/still-the-echo.webp",
+      "highlight": false
+    },
+    {
+      "title": "Thermopylae",
+      "kind": "single",
+      "year": "2015",
+      "artwork": "assets/images/releases/thermopylae.webp",
+      "highlight": false
+    },
+    {
+      "title": "Bonne Charogne",
+      "kind": "single",
+      "year": "2015",
+      "artwork": "assets/images/releases/bonne-charogne.webp",
+      "highlight": false
+    },
+    {
+      "title": "Under the Sea",
+      "kind": "single",
+      "year": "2015",
+      "artwork": "assets/images/releases/under-the-sea.webp",
+      "highlight": false
+    },
+    {
+      "title": "I’m the Prince",
+      "kind": "single",
+      "year": "2016",
+      "artwork": "assets/images/releases/im-the-prince.webp",
+      "highlight": false
+    },
+    {
+      "title": "Matisse",
+      "kind": "single",
+      "year": "2019",
+      "artwork": "assets/images/releases/matisse.webp",
+      "highlight": false
+    },
+    {
+      "title": "4 AM",
+      "kind": "single",
+      "year": "2020",
+      "artwork": "assets/images/releases/4-am.webp",
+      "highlight": true
+    },
+    {
+      "title": "Italian Soccer",
+      "kind": "single",
+      "year": "2021",
+      "artwork": "assets/images/releases/italian-soccer.webp",
+      "highlight": false
+    },
+    {
+      "title": "True North",
+      "kind": "single",
+      "year": "2021",
+      "artwork": "assets/images/releases/true-north.webp",
+      "highlight": false
+    },
+    {
+      "title": "Eventide",
+      "kind": "single",
+      "year": "2021",
+      "artwork": "assets/images/releases/eventide.webp",
+      "highlight": false
+    },
+    {
+      "title": "Tomato’s Tower",
+      "kind": "single",
+      "year": "2022",
+      "artwork": "assets/images/releases/tomatos-tower.webp",
+      "highlight": false
+    },
+    {
+      "title": "Forest",
+      "kind": "single",
+      "year": "2023",
+      "artwork": "assets/images/releases/forest.webp",
+      "highlight": true
+    },
+    {
+      "title": "Desert",
+      "kind": "single",
+      "year": "2024",
+      "artwork": "assets/images/releases/desert.webp",
+      "highlight": false
+    },
+    {
+      "title": "Ocean",
+      "kind": "single",
+      "year": "2024",
+      "artwork": "assets/images/releases/ocean.webp",
+      "highlight": false
+    },
+    {
+      "title": "Yugen",
+      "kind": "featured",
+      "year": "",
+      "artwork": "assets/images/releases/still-the-echo.webp",
+      "highlight": true,
+      "note": "Placeholder artwork until the dedicated asset is provided."
+    }
+  ],
+  "highlights": [
+    {
+      "year": "2019",
+      "title": {
+        "en": "UK Tour",
+        "it": "Tour nel Regno Unito"
+      },
+      "text": {
+        "en": "Live shows in Bristol and London.",
+        "it": "Concerti a Bristol e Londra."
+      }
+    },
+    {
+      "year": "2022",
+      "title": {
+        "en": "CONCRETION Festival",
+        "it": "CONCRETION Festival"
+      },
+      "text": {
+        "en": "Shared the stage with God Is an Astronaut and pg.lost.",
+        "it": "Condivisione del palco con God Is an Astronaut e pg.lost."
+      }
+    },
+    {
+      "year": "2022",
+      "title": {
+        "en": "Calibro 35 plays Morricone",
+        "it": "Calibro 35 plays Morricone"
+      },
+      "text": {
+        "en": "Opened the debut tour of Calibro 35 plays Morricone.",
+        "it": "Apertura del tour di debutto di Calibro 35 plays Morricone."
+      }
+    },
+    {
+      "year": "2022",
+      "title": {
+        "en": "Arezzo Wave final",
+        "it": "Finale Arezzo Wave"
+      },
+      "text": {
+        "en": "Teatro Comunale, 20 October 2022.",
+        "it": "Teatro Comunale, 20 ottobre 2022."
+      }
+    },
+    {
+      "year": "2025",
+      "title": {
+        "en": "Corte dei Miracoli",
+        "it": "Corte dei Miracoli"
+      },
+      "text": {
+        "en": "Latest documented live show in Siena.",
+        "it": "Ultimo live documentato a Siena."
+      }
+    }
+  ],
+  "i18n": {
+    "en": {
+      "metaTitle": "Red Light Skyscraper — Instrumental Post-Rock from Siena, Italy",
+      "metaDescription": "Official website of Red Light Skyscraper: instrumental post-rock soundscapes, live audiovisual performances, music, videos, tour archive, press kit and booking.",
+      "nav": {
+        "experience": "Experience",
+        "music": "Music",
+        "videos": "Videos",
+        "live": "Live",
+        "shop": "Shop",
+        "about": "About",
+        "press": "Press"
+      },
+      "heroKicker": "Instrumental post-rock soundscapes from Siena, Italy",
+      "heroTitle": "A cinematic live experience in sound and image.",
+      "heroText": "Red Light Skyscraper blends cinematic tension, explosive dynamics and emotional melodies into wordless journeys shaped by sound, light and visuals.",
+      "ctaListen": "Listen",
+      "ctaWatch": "Watch",
+      "ctaBooking": "Booking",
+      "experienceTitle": "The experience",
+      "experienceText": "Each performance is conceived as a journey. The band moves through instrumental post-rock, visual projections and synced backdrops, turning the stage into a living cinematic space.",
+      "musicTitle": "Music",
+      "musicIntro": "One album, a sequence of singles and a new concept record in progress.",
+      "featuredTracks": "Featured tracks",
+      "discography": "Discography",
+      "videosTitle": "Videos",
+      "videosIntro": "Official videos and live footage from the audiovisual side of the project.",
+      "liveTitle": "Live",
+      "liveIntro": "Selected shows and a complete archive of live performances.",
+      "selectedShows": "Selected live moments",
+      "archive": "Full live archive",
+      "filterPlaceholder": "Filter by year, city, venue or country",
+      "shopTitle": "Shop",
+      "shopText": "Music, records and merch are available through Bandcamp.",
+      "shopButton": "Go to Bandcamp shop",
+      "aboutTitle": "About",
+      "aboutText": "Formed in 2015 among the Tuscan hills, Red Light Skyscraper is an instrumental post-rock band blending cinematic tension, explosive dynamics and emotional melodies. The project stems from the fusion of diverse musical backgrounds, evolving into a wordless language that conveys emotional depth, inner journeys and urban atmospheres. With one album and over ten singles released, the band has performed at acclaimed events such as CONCRETION Festival and opened the debut tour of Calibro 35 plays Morricone. The band is now working on a new concept album born from an artistic collaboration with a Syrian photographer from Damascus, a dialogue between sound and imagery exploring memory, displacement and resilience.",
+      "lineup": "Line-up",
+      "pressTitle": "Press & booking",
+      "pressText": "Contact Red Light Skyscraper for festivals, clubs and special events across Europe and beyond.",
+      "downloadEn": "Download press kit EN",
+      "downloadIt": "Download press kit IT",
+      "techTitle": "Technical info",
+      "techText": "Set duration: 45–60 minutes. Standard four-piece rock band setup. Visual projections and synced backdrops. Full tech rider available upon request.",
+      "credits": "Photo credits: Senio Firmati, Luca Chiandoni, Matt Jarvis, Mattia Cialoni, Carlo Parillo.",
+      "rights": "All rights reserved."
+    },
+    "it": {
+      "metaTitle": "Red Light Skyscraper — Post-rock strumentale da Siena",
+      "metaDescription": "Sito ufficiale dei Red Light Skyscraper: paesaggi sonori post-rock strumentali, performance audiovisive, musica, video, archivio live, press kit e booking.",
+      "nav": {
+        "experience": "Esperienza",
+        "music": "Musica",
+        "videos": "Video",
+        "live": "Live",
+        "shop": "Shop",
+        "about": "Chi siamo",
+        "press": "Press"
+      },
+      "heroKicker": "Paesaggi sonori post-rock strumentali da Siena, Italia",
+      "heroTitle": "Un’esperienza live cinematografica tra suono e immagine.",
+      "heroText": "Red Light Skyscraper fonde tensione cinematografica, dinamiche esplosive e melodie emotive in viaggi senza parole costruiti attraverso suono, luce e visual.",
+      "ctaListen": "Ascolta",
+      "ctaWatch": "Guarda",
+      "ctaBooking": "Booking",
+      "experienceTitle": "L’esperienza",
+      "experienceText": "Ogni performance è concepita come un viaggio. La band attraversa post-rock strumentale, proiezioni visuali e fondali sincronizzati, trasformando il palco in uno spazio cinematografico vivo.",
+      "musicTitle": "Musica",
+      "musicIntro": "Un album, una sequenza di singoli e un nuovo concept album in lavorazione.",
+      "featuredTracks": "Brani in evidenza",
+      "discography": "Discografia",
+      "videosTitle": "Video",
+      "videosIntro": "Videoclip ufficiali e contenuti live dalla dimensione audiovisiva del progetto.",
+      "liveTitle": "Live",
+      "liveIntro": "Una selezione di date rilevanti e l’archivio completo delle performance dal vivo.",
+      "selectedShows": "Momenti live selezionati",
+      "archive": "Archivio live completo",
+      "filterPlaceholder": "Filtra per anno, città, venue o paese",
+      "shopTitle": "Shop",
+      "shopText": "Musica, dischi e merch sono disponibili su Bandcamp.",
+      "shopButton": "Vai allo shop Bandcamp",
+      "aboutTitle": "Chi siamo",
+      "aboutText": "Formatasi nel 2015 tra le colline toscane, Red Light Skyscraper è una band post-rock strumentale che fonde tensione cinematografica, dinamiche esplosive e melodie emotive. Il progetto nasce dall’incontro di background musicali diversi, evolvendosi in un linguaggio senza parole capace di trasmettere profondità emotiva, viaggi interiori e atmosfere urbane. Con un album e oltre dieci singoli pubblicati, la band si è esibita in eventi di rilievo come il CONCRETION Festival e ha aperto il tour di debutto di Calibro 35 plays Morricone. Attualmente la band sta lavorando a un nuovo concept album nato dalla collaborazione artistica con una fotografa siriana di Damasco, un dialogo tra suono e immagine che esplora memoria, sradicamento e resilienza.",
+      "lineup": "Line-up",
+      "pressTitle": "Press & booking",
+      "pressText": "Contatta Red Light Skyscraper per festival, club ed eventi speciali in Europa e nel resto del mondo.",
+      "downloadEn": "Scarica press kit EN",
+      "downloadIt": "Scarica press kit IT",
+      "techTitle": "Info tecniche",
+      "techText": "Durata set: 45–60 minuti. Formazione rock a quattro elementi. Proiezioni visuali e fondali sincronizzati. Full tech rider su richiesta.",
+      "credits": "Crediti foto: Senio Firmati, Luca Chiandoni, Matt Jarvis, Mattia Cialoni, Carlo Parillo.",
+      "rights": "Tutti i diritti riservati."
+    }
+  }
+}
