@@ -58,20 +58,22 @@ function renderFeaturedTracks() {
       <img src="${track.artwork}" alt="${track.title} artwork" loading="lazy">
       <div>
         <h4>${track.title}</h4>
+        ${track.album ? `<span class="track-album">${track.album}</span>` : ""}
         <span>${[releaseKind(track.kind), track.year].filter(Boolean).join(" · ")}</span>
       </div>
-      <a href="${state.site.links.bandcamp}" target="_blank" rel="noopener">Listen</a>
+      <a href="${track.spotifyUrl || state.site.links.spotify}" target="_blank" rel="noopener">Listen</a>
     </article>
   `).join("");
 }
 
 function releaseCard(rel) {
+  const spotifyUrl = rel.spotifyUrl || state.site.links.spotify;
   return `
-    <article class="release-card reveal">
+    <a class="release-card reveal" href="${spotifyUrl}" target="_blank" rel="noopener" aria-label="${t("openSpotify")}: ${rel.title}">
       <img src="${rel.artwork}" alt="${rel.title} artwork" loading="lazy">
       <h4>${rel.title}</h4>
       <p>${releaseKind(rel.kind)}${rel.year ? ` · ${rel.year}` : ""}</p>
-    </article>
+    </a>
   `;
 }
 

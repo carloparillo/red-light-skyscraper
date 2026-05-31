@@ -92,106 +92,122 @@
       "kind": "album",
       "year": "2017",
       "artwork": "assets/images/releases/still-the-echo.webp",
-      "highlight": false
+      "highlight": false,
+      "spotifyUrl": "https://open.spotify.com/album/5smOopyl2W9tgdzMbq4r0m"
     },
     {
       "title": "Thermopylae",
       "kind": "single",
       "year": "2015",
       "artwork": "assets/images/releases/thermopylae.webp",
-      "highlight": false
+      "highlight": false,
+      "spotifyUrl": "https://open.spotify.com/album/5HVzpwXhyonLJPaDx1JeJ0"
     },
     {
       "title": "Bonne Charogne",
       "kind": "single",
       "year": "2015",
       "artwork": "assets/images/releases/bonne-charogne.webp",
-      "highlight": false
+      "highlight": false,
+      "spotifyUrl": "https://open.spotify.com/album/5VQhG2WzxcZp0WVRnW63Lw"
     },
     {
       "title": "Under the Sea",
       "kind": "single",
       "year": "2015",
       "artwork": "assets/images/releases/under-the-sea.webp",
-      "highlight": false
+      "highlight": false,
+      "spotifyUrl": "https://open.spotify.com/track/72oznfvxJ9HPoDmPIYfuvt"
     },
     {
       "title": "I’m the Prince",
       "kind": "single",
       "year": "2016",
       "artwork": "assets/images/releases/im-the-prince.webp",
-      "highlight": false
+      "highlight": false,
+      "spotifyUrl": "https://open.spotify.com/track/4vFAoZxxqFVuso3yD5TKxb"
     },
     {
       "title": "Matisse",
       "kind": "single",
       "year": "2019",
       "artwork": "assets/images/releases/matisse.webp",
-      "highlight": false
+      "highlight": false,
+      "spotifyUrl": "https://open.spotify.com/album/640XmDU9oxyXg6Es90Kyzd"
     },
     {
       "title": "4 AM",
       "kind": "single",
       "year": "2020",
       "artwork": "assets/images/releases/4-am.webp",
-      "highlight": true
+      "highlight": true,
+      "spotifyUrl": "https://open.spotify.com/track/0lgwMlExdwf19alUVy59ch"
     },
     {
       "title": "Italian Soccer",
       "kind": "single",
       "year": "2021",
       "artwork": "assets/images/releases/italian-soccer.webp",
-      "highlight": false
+      "highlight": false,
+      "spotifyUrl": "https://open.spotify.com/intl-it/album/04auszmkFD6wYZVPW3HeVs"
     },
     {
       "title": "True North",
       "kind": "single",
       "year": "2021",
       "artwork": "assets/images/releases/true-north.webp",
-      "highlight": false
+      "highlight": false,
+      "spotifyUrl": "https://open.spotify.com/intl-es/album/4UdDG9FxxYVrHT5VTERi6r"
     },
     {
       "title": "Eventide",
       "kind": "single",
       "year": "2021",
       "artwork": "assets/images/releases/eventide.webp",
-      "highlight": false
+      "highlight": false,
+      "spotifyUrl": "https://open.spotify.com/track/6X6GpVPGUB1rQ2BB59bWbz"
     },
     {
       "title": "Tomato’s Tower",
       "kind": "single",
       "year": "2022",
       "artwork": "assets/images/releases/tomatos-tower.webp",
-      "highlight": false
+      "highlight": false,
+      "spotifyUrl": "https://open.spotify.com/intl-it/album/3msNzkfy6u0YsUKxAAl3rs"
     },
     {
       "title": "Forest",
       "kind": "single",
       "year": "2023",
       "artwork": "assets/images/releases/forest.webp",
-      "highlight": true
+      "highlight": true,
+      "spotifyUrl": "https://open.spotify.com/track/7kmdvUtqJnO4sRcSfvTJyB"
     },
     {
       "title": "Desert",
       "kind": "single",
       "year": "2024",
       "artwork": "assets/images/releases/desert.webp",
-      "highlight": false
+      "highlight": false,
+      "spotifyUrl": "https://open.spotify.com/intl-it/album/4RuyVT4L38a9wCaumkq1kE"
     },
     {
       "title": "Ocean",
       "kind": "single",
       "year": "2024",
       "artwork": "assets/images/releases/ocean.webp",
-      "highlight": false
+      "highlight": false,
+      "spotifyUrl": "https://open.spotify.com/track/4Qiqv9LGXw2linaV52ECQh"
     },
     {
       "title": "Yugen",
       "kind": "featured",
-      "year": "",
+      "year": "2017",
       "artwork": "assets/images/releases/still-the-echo.webp",
       "highlight": true,
-      "note": "Placeholder artwork until the dedicated asset is provided."
+      "note": "From Still the Echo.",
+      "spotifyUrl": "https://open.spotify.com/track/3c1OT2xADRQkb1ZcUBthsE",
+      "album": "Still the Echo"
     }
   ],
   "highlights": [
@@ -304,7 +320,8 @@
       "quoteRockit": "“Still The Echo is pleasant to listen to, in which you can feel a thick sound, obtained with effort, work and heart.”",
       "albumsLabel": "Albums",
       "singlesLabel": "Singles",
-      "sharePhotos": "Share photos"
+      "sharePhotos": "Share photos",
+      "openSpotify": "Open on Spotify"
     },
     "it": {
       "metaTitle": "Red Light Skyscraper — Post-rock strumentale da Siena",
@@ -358,7 +375,8 @@
       "quoteRockit": "“Still The Echo è piacevole da ascoltare, si percepisce un suono denso, ottenuto con impegno, lavoro e cuore.”",
       "albumsLabel": "Album",
       "singlesLabel": "Singoli",
-      "sharePhotos": "Invia foto"
+      "sharePhotos": "Invia foto",
+      "openSpotify": "Apri su Spotify"
     }
   }
 }
