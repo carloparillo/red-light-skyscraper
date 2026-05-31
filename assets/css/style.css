@@ -449,3 +449,5 @@ cite{display:block;margin-top:1rem;color:var(--red);font-style:normal}
 .shop-feature img {
   object-position: center center;
 }
+
+[hidden] { display: none !important; }

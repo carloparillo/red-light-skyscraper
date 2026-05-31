@@ -34,7 +34,20 @@ function setLanguage(lang) {
   });
 
   $$(".lang-btn").forEach(btn => btn.classList.toggle("active", btn.dataset.lang === lang));
+  updatePressKitVisibility();
   renderDynamic();
+}
+
+
+function updatePressKitVisibility() {
+  $$(".presskit-en").forEach(el => {
+    el.hidden = state.lang !== "en";
+    el.setAttribute("aria-hidden", state.lang !== "en" ? "true" : "false");
+  });
+  $$(".presskit-it").forEach(el => {
+    el.hidden = state.lang !== "it";
+    el.setAttribute("aria-hidden", state.lang !== "it" ? "true" : "false");
+  });
 }
 
 function releaseKind(kind) {
