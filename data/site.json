@@ -14,7 +14,10 @@
     "linktree": "https://linktr.ee/redlightskyscraper",
     "apple": "https://music.apple.com/it/artist/red-light-skyscraper/1448883354",
     "soundcloud": "https://soundcloud.com/red-light-skyscraper",
-    "tiktok": "https://www.tiktok.com/@redlightskyscraper"
+    "tiktok": "https://www.tiktok.com/@redlightskyscraper",
+    "merch": "https://redlightskyscraper.bandcamp.com/merch",
+    "photoFormEn": "https://forms.gle/dsM6qqHWz8iSiJM17",
+    "photoFormIt": "https://forms.gle/QoxCekjsJoUJ3JMC9"
   },
   "assets": {
     "logos": {
@@ -281,8 +284,8 @@
       "archive": "Full live archive",
       "filterPlaceholder": "Filter by year, city, venue or country",
       "shopTitle": "Shop",
-      "shopText": "Music, records and merch are available through Bandcamp.",
-      "shopButton": "Go to Bandcamp shop",
+      "shopText": "Music, CDs, apparel and limited merch are available through our Bandcamp merch page.",
+      "shopButton": "Open Bandcamp merch",
       "aboutTitle": "About",
       "aboutText": "Formed in 2015 among the Tuscan hills, Red Light Skyscraper is an instrumental post-rock band blending cinematic tension, explosive dynamics and emotional melodies. The project stems from the fusion of diverse musical backgrounds, evolving into a wordless language that conveys emotional depth, inner journeys and urban atmospheres. With one album and over ten singles released, the band has performed at acclaimed events such as CONCRETION Festival and opened the debut tour of Calibro 35 plays Morricone. The band is now working on a new concept album born from an artistic collaboration with a Syrian photographer from Damascus, a dialogue between sound and imagery exploring memory, displacement and resilience.",
       "lineup": "Line-up",
@@ -294,13 +297,14 @@
       "techText": "Set duration: 45–60 minutes. Standard four-piece rock band setup. Visual projections and synced backdrops. Full tech rider available upon request.",
       "credits": "Photo credits: Senio Firmati, Luca Chiandoni, Matt Jarvis, Mattia Cialoni, Carlo Parillo.",
       "rights": "All rights reserved.",
-      "shopIntro": "Selected records and merch. Purchases are handled through Bandcamp.",
+      "shopIntro": "Music, CDs, apparel and limited merch are available through Bandcamp.",
       "shopCta": "Open product on Bandcamp",
       "quoteProg": "“A moody multi-dimensional single… creating an atmosphere of warm ambience and musical dynamism… evoking the work of one of the giants of modern art.”",
       "quoteRepubblica": "“A post-rock driven by emotions with a strong narrative impact, which acts like an inner cosmic trip through our soul and thoughts.”",
       "quoteRockit": "“Still The Echo is pleasant to listen to, in which you can feel a thick sound, obtained with effort, work and heart.”",
       "albumsLabel": "Albums",
-      "singlesLabel": "Singles"
+      "singlesLabel": "Singles",
+      "sharePhotos": "Share photos"
     },
     "it": {
       "metaTitle": "Red Light Skyscraper — Post-rock strumentale da Siena",
@@ -334,8 +338,8 @@
       "archive": "Archivio live completo",
       "filterPlaceholder": "Filtra per anno, città, venue o paese",
       "shopTitle": "Shop",
-      "shopText": "Musica, dischi e merch sono disponibili su Bandcamp.",
-      "shopButton": "Vai allo shop Bandcamp",
+      "shopText": "Musica, CD, abbigliamento e merch in edizione limitata sono disponibili sulla pagina merch di Bandcamp.",
+      "shopButton": "Apri il merch su Bandcamp",
       "aboutTitle": "Chi siamo",
       "aboutText": "Formatasi nel 2015 tra le colline toscane, Red Light Skyscraper è una band post-rock strumentale che fonde tensione cinematografica, dinamiche esplosive e melodie emotive. Il progetto nasce dall’incontro di background musicali diversi, evolvendosi in un linguaggio senza parole capace di trasmettere profondità emotiva, viaggi interiori e atmosfere urbane. Con un album e oltre dieci singoli pubblicati, la band si è esibita in eventi di rilievo come il CONCRETION Festival e ha aperto il tour di debutto di Calibro 35 plays Morricone. Attualmente la band sta lavorando a un nuovo concept album nato dalla collaborazione artistica con una fotografa siriana di Damasco, un dialogo tra suono e immagine che esplora memoria, sradicamento e resilienza.",
       "lineup": "Line-up",
@@ -347,13 +351,14 @@
       "techText": "Durata set: 45–60 minuti. Formazione rock a quattro elementi. Proiezioni visuali e fondali sincronizzati. Full tech rider su richiesta.",
       "credits": "Crediti foto: Senio Firmati, Luca Chiandoni, Matt Jarvis, Mattia Cialoni, Carlo Parillo.",
       "rights": "Tutti i diritti riservati.",
-      "shopIntro": "Una selezione di dischi e merch. Gli acquisti vengono gestiti tramite Bandcamp.",
+      "shopIntro": "Musica, CD, abbigliamento e merch in edizione limitata sono disponibili su Bandcamp.",
       "shopCta": "Apri su Bandcamp",
       "quoteProg": "“Un singolo dalle atmosfere sfaccettate… capace di creare un’atmosfera calda e dinamica… evocando il lavoro di uno dei giganti dell’arte moderna.”",
       "quoteRepubblica": "“Un post-rock guidato dalle emozioni con un forte impatto narrativo, che agisce come un viaggio cosmico interiore attraverso la nostra anima e i nostri pensieri.”",
       "quoteRockit": "“Still The Echo è piacevole da ascoltare, si percepisce un suono denso, ottenuto con impegno, lavoro e cuore.”",
       "albumsLabel": "Album",
-      "singlesLabel": "Singoli"
+      "singlesLabel": "Singoli",
+      "sharePhotos": "Invia foto"
     }
   }
 }

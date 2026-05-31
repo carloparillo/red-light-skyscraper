@@ -143,6 +143,18 @@ function formatDate(iso) {
   return d.toLocaleDateString(state.lang === "it" ? "it-IT" : "en-GB", { year:"numeric", month:"short", day:"2-digit" });
 }
 
+
+function buildPhotoFormUrl(concert) {
+  const base = state.lang === "it" ? state.site.links.photoFormIt : state.site.links.photoFormEn;
+  const params = new URLSearchParams({
+    date: concert.date || "",
+    city: concert.city || "",
+    event: concert.venue || "",
+    region: concert.region || ""
+  });
+  return `${base}?${params.toString()}`;
+}
+
 function renderConcertTable() {
   const tbody = $("#concert-table");
   if (!tbody) return;
@@ -162,6 +174,7 @@ function renderConcertTable() {
       <td>${c.venue}</td>
       <td>${c.city}</td>
       <td>${c.region}</td>
+      <td><a class="archive-action" href="${buildPhotoFormUrl(c)}" target="_blank" rel="noopener">${t("sharePhotos")}</a></td>
     </tr>
   `).join("");
 }

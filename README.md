@@ -64,3 +64,11 @@ When the final domain is purchased:
 - Added Yugen YouTube video.
 - Added visual merch/shop section linking to Bandcamp.
 - Added and prioritized Prog quote in Press & Booking.
+
+
+## Version 4 updates
+- Shop section uses one merch image and links directly to Bandcamp merch.
+- Live archive includes a Share photos action for each concert.
+- Share links route to the EN/IT Google Forms with concert context in URL parameters.
+
+Note: Google Forms true field prefill requires the form-specific `entry.xxxxx` IDs. Current links pass contextual URL parameters; replace `buildPhotoFormUrl()` in `assets/js/app.js` with the official pre-filled URL pattern if exact field prefill is required.
