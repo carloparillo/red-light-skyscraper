@@ -17,7 +17,8 @@
     "tiktok": "https://www.tiktok.com/@redlightskyscraper",
     "merch": "https://redlightskyscraper.bandcamp.com/merch",
     "photoFormEn": "https://forms.gle/dsM6qqHWz8iSiJM17",
-    "photoFormIt": "https://forms.gle/QoxCekjsJoUJ3JMC9"
+    "photoFormIt": "https://forms.gle/QoxCekjsJoUJ3JMC9",
+    "youtubeVideos": "https://youtube.com/@redlightskyscraper?si=WnorsiGMZInMrIwg"
   },
   "assets": {
     "logos": {
@@ -68,15 +69,6 @@
       "release": "Forest"
     },
     {
-      "title": "Matisse",
-      "type": {
-        "en": "Live video",
-        "it": "Videoclip live"
-      },
-      "youtubeId": "vrP_F48mlWw",
-      "release": "Matisse"
-    },
-    {
       "title": "Yugen",
       "type": {
         "en": "Official video",
@@ -84,6 +76,15 @@
       },
       "youtubeId": "S7OOOBN_Cr0",
       "release": "Yugen"
+    },
+    {
+      "title": "Matisse",
+      "type": {
+        "en": "Live video",
+        "it": "Videoclip live"
+      },
+      "youtubeId": "vrP_F48mlWw",
+      "release": "Matisse"
     }
   ],
   "releases": [
@@ -321,7 +322,10 @@
       "albumsLabel": "Albums",
       "singlesLabel": "Singles",
       "sharePhotos": "Share photos",
-      "openSpotify": "Open on Spotify"
+      "openSpotify": "Open on Spotify",
+      "youtubeMoreTitle": "Watch all videos",
+      "youtubeMoreText": "Explore music videos, live sessions and more audiovisual material on the official YouTube channel.",
+      "youtubeMoreButton": "Go to YouTube"
     },
     "it": {
       "metaTitle": "Red Light Skyscraper — Post-rock strumentale da Siena",
@@ -376,7 +380,10 @@
       "albumsLabel": "Album",
       "singlesLabel": "Singoli",
       "sharePhotos": "Invia foto",
-      "openSpotify": "Apri su Spotify"
+      "openSpotify": "Apri su Spotify",
+      "youtubeMoreTitle": "Guarda tutti i video",
+      "youtubeMoreText": "Esplora videoclip, live session e altri contenuti audiovisivi sul canale YouTube ufficiale.",
+      "youtubeMoreButton": "Vai a YouTube"
     }
   }
 }
