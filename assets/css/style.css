@@ -315,7 +315,6 @@ h1{
 .video-meta p{margin:.25rem 0 0;color:var(--muted)}
 
 .video-channel-box{
-  margin-top:1rem;
   border:1px solid var(--line);
   border-radius:var(--radius);
   background:
@@ -324,12 +323,17 @@ h1{
   box-shadow:var(--shadow);
   padding:1.2rem;
   display:flex;
-  align-items:center;
+  align-items:flex-start;
   justify-content:space-between;
   gap:1rem;
 }
-.video-channel-box h3{font-size:clamp(1.5rem,3vw,2.4rem);margin:.2rem 0 .35rem;letter-spacing:-.04em}
+.video-channel-card{
+  min-height:100%;
+  flex-direction:column;
+}
+.video-channel-box h3{font-size:clamp(1.5rem,3vw,2.15rem);margin:.2rem 0 .35rem;letter-spacing:-.04em}
 .video-channel-box p:not(.section-kicker){margin:0;color:var(--muted);max-width:720px}
+.video-channel-box .btn{align-self:flex-start;margin-top:auto}
 .live-hero{margin-bottom:2rem}
 .highlight-grid{
   display:grid;

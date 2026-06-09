@@ -110,7 +110,7 @@ function renderDiscography() {
 function renderVideos() {
   const grid = $("#video-grid");
   if (!grid) return;
-  grid.innerHTML = state.site.videos.map(video => {
+  const videoCards = state.site.videos.map(video => {
     const thumb = `https://img.youtube.com/vi/${video.youtubeId}/hqdefault.jpg`;
     return `
       <article class="video-card reveal">
@@ -126,6 +126,19 @@ function renderVideos() {
       </article>
     `;
   }).join("");
+
+  const channelCard = `
+    <article class="video-channel-box video-channel-card reveal">
+      <div>
+        <p class="section-kicker">${t("videoChannelKicker")}</p>
+        <h3>${t("videoChannelTitle")}</h3>
+        <p>${t("videoChannelText")}</p>
+      </div>
+      <a class="btn" href="https://www.youtube.com/c/redlightskyscraper" target="_blank" rel="noopener">${t("videoChannelButton")}</a>
+    </article>
+  `;
+
+  grid.innerHTML = videoCards + channelCard;
 
   $$(".video-load").forEach(button => {
     button.addEventListener("click", () => {
