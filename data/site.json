@@ -321,7 +321,11 @@
       "albumsLabel": "Albums",
       "singlesLabel": "Singles",
       "sharePhotos": "Share photos",
-      "openSpotify": "Open on Spotify"
+      "openSpotify": "Open on Spotify",
+      "videoChannelKicker": "Full archive",
+      "videoChannelTitle": "More videos on YouTube",
+      "videoChannelText": "Explore the full Red Light Skyscraper video archive, including official clips, live sessions and visual material.",
+      "videoChannelButton": "Open YouTube channel"
     },
     "it": {
       "metaTitle": "Red Light Skyscraper — Post-rock strumentale da Siena",
@@ -376,7 +380,11 @@
       "albumsLabel": "Album",
       "singlesLabel": "Singoli",
       "sharePhotos": "Invia foto",
-      "openSpotify": "Apri su Spotify"
+      "openSpotify": "Apri su Spotify",
+      "videoChannelKicker": "Archivio completo",
+      "videoChannelTitle": "Altri video su YouTube",
+      "videoChannelText": "Esplora l’archivio video completo dei Red Light Skyscraper, con videoclip ufficiali, live session e materiale visuale.",
+      "videoChannelButton": "Apri il canale YouTube"
     }
   }
 }

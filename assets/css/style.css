@@ -313,6 +313,23 @@ h1{
 .video-meta{padding:1rem}
 .video-meta h3{font-size:1.2rem}
 .video-meta p{margin:.25rem 0 0;color:var(--muted)}
+
+.video-channel-box{
+  margin-top:1rem;
+  border:1px solid var(--line);
+  border-radius:var(--radius);
+  background:
+    linear-gradient(135deg,rgba(223,36,40,.18),rgba(255,255,255,.035) 42%,rgba(255,255,255,.02)),
+    var(--panel);
+  box-shadow:var(--shadow);
+  padding:1.2rem;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:1rem;
+}
+.video-channel-box h3{font-size:clamp(1.5rem,3vw,2.4rem);margin:.2rem 0 .35rem;letter-spacing:-.04em}
+.video-channel-box p:not(.section-kicker){margin:0;color:var(--muted);max-width:720px}
 .live-hero{margin-bottom:2rem}
 .highlight-grid{
   display:grid;
@@ -410,6 +427,7 @@ cite{display:block;margin-top:1rem;color:var(--red);font-style:normal}
   .release-grid{grid-template-columns:repeat(3, minmax(0,1fr))}
   .highlight-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
   .video-grid{grid-template-columns:1fr}
+  .video-channel-box{flex-direction:column;align-items:flex-start}
   .shop-feature{min-height:420px}
   .archive-head{align-items:flex-start;flex-direction:column}
 }
