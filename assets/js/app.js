@@ -15,24 +15,6 @@ function t(path) {
   return getNested(state.site.i18n[state.lang], path) || getNested(state.site.i18n.en, path) || path;
 }
 
-function videoArchiveCopy(key) {
-  const fallback = {
-    en: {
-      youtubeMoreTitle: "Continue the visual journey",
-      youtubeMoreText: "Watch the full Red Light Skyscraper video archive: official clips, live sessions and stage projections collected on YouTube.",
-      youtubeMoreButton: "Open YouTube archive"
-    },
-    it: {
-      youtubeMoreTitle: "Continua il viaggio visivo",
-      youtubeMoreText: "Guarda l’archivio video completo dei Red Light Skyscraper: videoclip ufficiali, live session e proiezioni raccolte su YouTube.",
-      youtubeMoreButton: "Apri archivio YouTube"
-    }
-  };
-  const value = t(key);
-  if (value && value !== key) return value;
-  return (fallback[state.lang] && fallback[state.lang][key]) || fallback.en[key] || "";
-}
-
 function setLanguage(lang) {
   state.lang = lang;
   localStorage.setItem("rls-lang", lang);
@@ -128,7 +110,7 @@ function renderDiscography() {
 function renderVideos() {
   const grid = $("#video-grid");
   if (!grid) return;
-  const videoCards = state.site.videos.map(video => {
+  grid.innerHTML = state.site.videos.map(video => {
     const thumb = `https://img.youtube.com/vi/${video.youtubeId}/hqdefault.jpg`;
     return `
       <article class="video-card reveal">
@@ -144,19 +126,6 @@ function renderVideos() {
       </article>
     `;
   }).join("");
-
-  const youtubeCta = `
-    <article class="video-cta-card reveal">
-      <div>
-        <span class="eyebrow">Full video archive</span>
-        <h3>${videoArchiveCopy("youtubeMoreTitle")}</h3>
-        <p>${videoArchiveCopy("youtubeMoreText")}</p>
-      </div>
-      <a class="btn" href="${state.site.links.youtubeVideos || state.site.links.youtube}" target="_blank" rel="noopener">${videoArchiveCopy("youtubeMoreButton")}</a>
-    </article>
-  `;
-
-  grid.innerHTML = videoCards + youtubeCta;
 
   $$(".video-load").forEach(button => {
     button.addEventListener("click", () => {
@@ -317,8 +286,8 @@ function observeReveals() {
 
 async function init() {
   const [siteRes, concertsRes] = await Promise.all([
-    fetch("data/site.json?v=8"),
-    fetch("data/concerts.json?v=8")
+    fetch("data/site.json"),
+    fetch("data/concerts.json")
   ]);
   state.site = await siteRes.json();
   state.concerts = await concertsRes.json();

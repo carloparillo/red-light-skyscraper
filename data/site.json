@@ -17,8 +17,7 @@
     "tiktok": "https://www.tiktok.com/@redlightskyscraper",
     "merch": "https://redlightskyscraper.bandcamp.com/merch",
     "photoFormEn": "https://forms.gle/dsM6qqHWz8iSiJM17",
-    "photoFormIt": "https://forms.gle/QoxCekjsJoUJ3JMC9",
-    "youtubeVideos": "https://youtube.com/@redlightskyscraper?si=WnorsiGMZInMrIwg"
+    "photoFormIt": "https://forms.gle/QoxCekjsJoUJ3JMC9"
   },
   "assets": {
     "logos": {
@@ -69,15 +68,6 @@
       "release": "Forest"
     },
     {
-      "title": "Yugen",
-      "type": {
-        "en": "Official video",
-        "it": "Videoclip ufficiale"
-      },
-      "youtubeId": "S7OOOBN_Cr0",
-      "release": "Yugen"
-    },
-    {
       "title": "Matisse",
       "type": {
         "en": "Live video",
@@ -85,6 +75,15 @@
       },
       "youtubeId": "vrP_F48mlWw",
       "release": "Matisse"
+    },
+    {
+      "title": "Yugen",
+      "type": {
+        "en": "Official video",
+        "it": "Videoclip ufficiale"
+      },
+      "youtubeId": "S7OOOBN_Cr0",
+      "release": "Yugen"
     }
   ],
   "releases": [
@@ -322,10 +321,7 @@
       "albumsLabel": "Albums",
       "singlesLabel": "Singles",
       "sharePhotos": "Share photos",
-      "openSpotify": "Open on Spotify",
-      "youtubeMoreTitle": "Continue the visual journey",
-      "youtubeMoreText": "Watch the full Red Light Skyscraper video archive: official clips, live sessions and stage projections collected on YouTube.",
-      "youtubeMoreButton": "Open YouTube archive"
+      "openSpotify": "Open on Spotify"
     },
     "it": {
       "metaTitle": "Red Light Skyscraper — Post-rock strumentale da Siena",
@@ -380,10 +376,7 @@
       "albumsLabel": "Album",
       "singlesLabel": "Singoli",
       "sharePhotos": "Invia foto",
-      "openSpotify": "Apri su Spotify",
-      "youtubeMoreTitle": "Continua il viaggio visivo",
-      "youtubeMoreText": "Guarda l’archivio video completo dei Red Light Skyscraper: videoclip ufficiali, live session e proiezioni raccolte su YouTube.",
-      "youtubeMoreButton": "Apri archivio YouTube"
+      "openSpotify": "Apri su Spotify"
     }
   }
 }
