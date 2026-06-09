@@ -128,13 +128,19 @@ function renderVideos() {
   }).join("");
 
   const channelCard = `
-    <article class="video-channel-box video-channel-card reveal">
-      <div>
-        <p class="section-kicker">${t("videoChannelKicker")}</p>
-        <h3>${t("videoChannelTitle")}</h3>
-        <p>${t("videoChannelText")}</p>
+    <article class="video-card video-channel-card reveal">
+      <div class="video-frame video-channel-frame">
+        <div class="video-channel-content">
+          <p class="section-kicker">${t("videoChannelKicker")}</p>
+          <h3>${t("videoChannelTitle")}</h3>
+          <p>${t("videoChannelText")}</p>
+          <a class="btn" href="https://www.youtube.com/c/redlightskyscraper" target="_blank" rel="noopener">${t("videoChannelButton")}</a>
+        </div>
       </div>
-      <a class="btn" href="https://www.youtube.com/c/redlightskyscraper" target="_blank" rel="noopener">${t("videoChannelButton")}</a>
+      <div class="video-meta">
+        <h3>YouTube</h3>
+        <p>${t("videoChannelKicker")}</p>
+      </div>
     </article>
   `;
 
