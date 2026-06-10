@@ -303,6 +303,57 @@ function observeReveals() {
   items.forEach(el => io.observe(el));
 }
 
+
+const GA_MEASUREMENT_ID = "G-HC2148DWPW";
+const COOKIE_CHOICE_KEY = "rls-cookie-analytics";
+let analyticsLoaded = false;
+
+function loadGoogleAnalytics() {
+  if (analyticsLoaded || !GA_MEASUREMENT_ID) return;
+  analyticsLoaded = true;
+  window.dataLayer = window.dataLayer || [];
+  window.gtag = function(){ window.dataLayer.push(arguments); };
+  const script = document.createElement("script");
+  script.async = true;
+  script.src = `https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`;
+  document.head.appendChild(script);
+  window.gtag("js", new Date());
+  window.gtag("config", GA_MEASUREMENT_ID, { anonymize_ip: true });
+}
+
+function showCookieBanner(force = false) {
+  const banner = $("#cookie-banner");
+  if (!banner) return;
+  const choice = localStorage.getItem(COOKIE_CHOICE_KEY);
+  banner.hidden = !force && (choice === "accepted" || choice === "rejected");
+}
+
+function hideCookieBanner() {
+  const banner = $("#cookie-banner");
+  if (banner) banner.hidden = true;
+}
+
+function acceptAnalyticsCookies() {
+  localStorage.setItem(COOKIE_CHOICE_KEY, "accepted");
+  hideCookieBanner();
+  loadGoogleAnalytics();
+}
+
+function rejectAnalyticsCookies() {
+  localStorage.setItem(COOKIE_CHOICE_KEY, "rejected");
+  hideCookieBanner();
+}
+
+function setupCookieConsent() {
+  $$('[data-cookie-accept]').forEach(btn => btn.addEventListener("click", acceptAnalyticsCookies));
+  $$('[data-cookie-reject]').forEach(btn => btn.addEventListener("click", rejectAnalyticsCookies));
+  $$('[data-cookie-settings]').forEach(btn => btn.addEventListener("click", () => showCookieBanner(true)));
+  if (localStorage.getItem(COOKIE_CHOICE_KEY) === "accepted") {
+    loadGoogleAnalytics();
+  }
+  showCookieBanner();
+}
+
 async function init() {
   const [siteRes, concertsRes] = await Promise.all([
     fetch("data/site.json"),
@@ -319,6 +370,7 @@ async function init() {
   setupSpotify();
   setupArchiveFilter();
   setupLanguageButtons();
+  setupCookieConsent();
   setLanguage(state.lang);
 }
 

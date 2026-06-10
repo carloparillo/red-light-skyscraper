@@ -325,7 +325,12 @@
       "videoChannelKicker": "Full archive",
       "videoChannelTitle": "More videos on YouTube",
       "videoChannelText": "Explore the full Red Light Skyscraper video archive, including official clips, live sessions and visual material.",
-      "videoChannelButton": "Open YouTube channel"
+      "videoChannelButton": "Open YouTube channel",
+      "cookieSettings": "Cookie settings",
+      "cookieTitle": "Cookie preferences",
+      "cookieText": "We use essential cookies to make this website work. With your consent, we may also use analytics cookies to understand how visitors interact with the site. You can accept, reject or change your preferences at any time.",
+      "cookieAccept": "Accept analytics",
+      "cookieReject": "Reject"
     },
     "it": {
       "metaTitle": "Red Light Skyscraper — Post-rock strumentale da Siena",
@@ -384,7 +389,12 @@
       "videoChannelKicker": "Archivio completo",
       "videoChannelTitle": "Altri video su YouTube",
       "videoChannelText": "Esplora l’archivio video completo dei Red Light Skyscraper, con videoclip ufficiali, live session e materiale visuale.",
-      "videoChannelButton": "Apri il canale YouTube"
+      "videoChannelButton": "Apri il canale YouTube",
+      "cookieSettings": "Impostazioni cookie",
+      "cookieTitle": "Preferenze cookie",
+      "cookieText": "Utilizziamo cookie tecnici necessari al funzionamento del sito. Con il tuo consenso, potremmo utilizzare anche cookie analitici per capire come i visitatori interagiscono con il sito. Puoi accettare, rifiutare o modificare le preferenze in qualsiasi momento.",
+      "cookieAccept": "Accetta analytics",
+      "cookieReject": "Rifiuta"
     }
   }
 }
