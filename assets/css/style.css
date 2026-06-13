@@ -564,3 +564,22 @@ h1, h2, h3, h4, h5, h6 {
     justify-content: flex-start;
   }
 }
+
+/* Remove residual underline/focus artifacts on CTA buttons */
+.btn,
+.btn:hover,
+.btn:active,
+.btn:visited,
+.btn:focus {
+  text-decoration: none !important;
+}
+.btn:focus-visible {
+  outline: 1px solid rgba(223,36,40,.65);
+  outline-offset: 4px;
+  text-decoration: none !important;
+}
+.hero .btn::before,
+.hero .btn::after {
+  content: none !important;
+  display: none !important;
+}
