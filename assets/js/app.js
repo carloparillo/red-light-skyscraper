@@ -7,6 +7,17 @@ const state = {
 const $ = (sel, root = document) => root.querySelector(sel);
 const $$ = (sel, root = document) => [...root.querySelectorAll(sel)];
 
+const liveCarouselImages = [
+  "assets/images/live/carousel/2019-UK-Tour-Bristol-London.jpg.jpg",
+  "assets/images/live/carousel/2022-Concretion-Festival-Aquileia.jpg.jpg",
+  "assets/images/live/carousel/2022-Calibro-35-Morricone-Siena.jpg.jpg",
+  "assets/images/live/carousel/2022-Arezzo-Wave-Final-Teatro-Comunale.jpg.png",
+  "assets/images/live/carousel/2025-Corte-dei-Miracoli-Siena.jpg.jpg"
+];
+let liveCarouselIndex = 0;
+let liveCarouselTimer = null;
+
+
 function getNested(obj, path) {
   return path.split(".").reduce((acc, key) => acc && acc[key], obj);
 }
@@ -160,6 +171,102 @@ function renderVideos() {
   });
 }
 
+
+function cleanImageStem(path) {
+  return path.split("/").pop().replace(/\.(jpg|jpeg|png|webp)$/i, "").replace(/\.(jpg|jpeg|png|webp)$/i, "");
+}
+
+function titleFromTokens(tokens) {
+  const lowerWords = new Set(["a", "an", "and", "the", "of", "dei", "del", "della", "di", "da", "in"]);
+  return tokens.map((token, index) => {
+    if (/^\d+$/.test(token)) return token;
+    if (token.toUpperCase() === "UK") return "UK";
+    const lower = token.toLowerCase();
+    if (index > 0 && lowerWords.has(lower)) return lower;
+    return lower.charAt(0).toUpperCase() + lower.slice(1);
+  }).join(" ");
+}
+
+function parseLivePhoto(path) {
+  const parts = cleanImageStem(path).split("-").filter(Boolean);
+  const year = parts.shift() || "";
+  let placeTokens = parts.slice(-1);
+  let eventTokens = parts.slice(0, -1);
+
+  const lastTwo = parts.slice(-2).join("-").toLowerCase();
+  if (lastTwo === "bristol-london" || lastTwo === "teatro-comunale") {
+    placeTokens = parts.slice(-2);
+    eventTokens = parts.slice(0, -2);
+  }
+
+  return {
+    year,
+    event: titleFromTokens(eventTokens),
+    place: placeTokens.map(token => token.toUpperCase() === "UK" ? "UK" : titleFromTokens([token])).join(lastTwo === "bristol-london" ? " / " : " ")
+  };
+}
+
+function setLiveCarouselSlide(index) {
+  const track = $("#live-carousel-track");
+  if (!track) return;
+  liveCarouselIndex = (index + liveCarouselImages.length) % liveCarouselImages.length;
+  track.style.transform = `translateX(-${liveCarouselIndex * 100}%)`;
+  $$(".live-carousel-dot").forEach((dot, dotIndex) => {
+    dot.classList.toggle("active", dotIndex === liveCarouselIndex);
+  });
+}
+
+function startLiveCarousel() {
+  clearInterval(liveCarouselTimer);
+  liveCarouselTimer = setInterval(() => setLiveCarouselSlide(liveCarouselIndex + 1), 5200);
+}
+
+function renderLiveCarousel() {
+  const carousel = $("#live-carousel");
+  const track = $("#live-carousel-track");
+  const dots = $("#live-carousel-dots");
+  if (!carousel || !track || !dots) return;
+
+  track.innerHTML = liveCarouselImages.map((src, index) => {
+    const meta = parseLivePhoto(src);
+    return `
+      <figure class="live-carousel-slide">
+        <img src="${src}" alt="${meta.event} live performance, ${meta.place}, ${meta.year}" loading="${index === 0 ? "eager" : "lazy"}">
+        <figcaption class="live-carousel-overlay">
+          <strong>${meta.event}</strong>
+          <span>${[meta.place, meta.year].filter(Boolean).join(" · ")}</span>
+        </figcaption>
+      </figure>
+    `;
+  }).join("");
+
+  dots.innerHTML = liveCarouselImages.map((_, index) => `
+    <button class="live-carousel-dot" type="button" aria-label="Show live photo ${index + 1}"></button>
+  `).join("");
+
+  $(".live-carousel-prev", carousel)?.addEventListener("click", () => {
+    setLiveCarouselSlide(liveCarouselIndex - 1);
+    startLiveCarousel();
+  });
+  $(".live-carousel-next", carousel)?.addEventListener("click", () => {
+    setLiveCarouselSlide(liveCarouselIndex + 1);
+    startLiveCarousel();
+  });
+  $$(".live-carousel-dot", carousel).forEach((dot, index) => {
+    dot.addEventListener("click", () => {
+      setLiveCarouselSlide(index);
+      startLiveCarousel();
+    });
+  });
+  carousel.addEventListener("mouseenter", () => clearInterval(liveCarouselTimer));
+  carousel.addEventListener("mouseleave", startLiveCarousel);
+  carousel.addEventListener("focusin", () => clearInterval(liveCarouselTimer));
+  carousel.addEventListener("focusout", startLiveCarousel);
+
+  setLiveCarouselSlide(liveCarouselIndex);
+  startLiveCarousel();
+}
+
 function renderHighlights() {
   const grid = $("#live-highlights");
   if (!grid) return;
@@ -218,6 +325,7 @@ function renderDynamic() {
   renderDiscography();
   renderVideos();
   renderHighlights();
+  renderLiveCarousel();
   renderConcertTable();
   observeReveals();
 }
