@@ -164,10 +164,7 @@ h1{
 .btn.primary{background:linear-gradient(135deg,var(--red),var(--red-dark));border-color:transparent}
 .btn.ghost{background:transparent}
 .btn.small{min-height:40px;font-size:.68rem;padding:.65rem .9rem}
-.scroll-indicator{
-  position:absolute;bottom:1.6rem;left:50%;width:1px;height:70px;background:linear-gradient(var(--text),transparent);
-  opacity:.55;
-}
+.scroll-indicator{display:none !important;}
 .section{
   width:min(var(--max), calc(100% - 2rem));
   margin:0 auto;
