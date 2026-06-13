@@ -360,10 +360,16 @@ h1{
   height:100%;
   display:block;
   object-fit:cover;
+  object-position:center center;
   border:0;
   border-radius:0;
   box-shadow:none;
   min-height:0;
+}
+.live-carousel-slide.is-portrait img{
+  object-fit:contain;
+  object-position:center center;
+  background:#050505;
 }
 .live-carousel-slide::after{
   content:"";

@@ -187,8 +187,43 @@ function titleFromTokens(tokens) {
   }).join(" ");
 }
 
+const livePhotoMeta = {
+  "2019-UK-Tour-Bristol-London": {
+    year: "2019",
+    event: "UK Tour",
+    place: "Bristol / London"
+  },
+  "2022-Concretion-Festival-Aquileia": {
+    year: "2022",
+    event: "Concretion Festival",
+    place: "Aquileia"
+  },
+  "2022-Calibro-35-Morricone-Siena": {
+    year: "2022",
+    event: "Calibro 35 plays Morricone",
+    place: "Siena"
+  },
+  "2022-Arezzo-Wave-Final-Teatro-Comunale": {
+    year: "2022",
+    event: "Arezzo Wave Final",
+    place: "Teatro Comunale, Arezzo"
+  },
+  "2025-Corte-dei-Miracoli-Siena": {
+    year: "2025",
+    event: "Corte dei Miracoli",
+    place: "Siena"
+  }
+};
+
+const portraitLivePhotoStems = new Set([
+  "2022-Concretion-Festival-Aquileia"
+]);
+
 function parseLivePhoto(path) {
-  const parts = cleanImageStem(path).split("-").filter(Boolean);
+  const stem = cleanImageStem(path);
+  if (livePhotoMeta[stem]) return livePhotoMeta[stem];
+
+  const parts = stem.split("-").filter(Boolean);
   const year = parts.shift() || "";
   let placeTokens = parts.slice(-1);
   let eventTokens = parts.slice(0, -1);
@@ -230,7 +265,7 @@ function renderLiveCarousel() {
   track.innerHTML = liveCarouselImages.map((src, index) => {
     const meta = parseLivePhoto(src);
     return `
-      <figure class="live-carousel-slide">
+      <figure class="live-carousel-slide${portraitLivePhotoStems.has(cleanImageStem(src)) ? " is-portrait" : ""}">
         <img src="${src}" alt="${meta.event} live performance, ${meta.place}, ${meta.year}" loading="${index === 0 ? "eager" : "lazy"}">
         <figcaption class="live-carousel-overlay">
           <strong>${meta.event}</strong>
