@@ -399,86 +399,66 @@
       "creditsPrefix": "Crediti foto:"
     }
   },
-  "highlightSlides": [
+  "liveCarousel": [
     {
-      "image": "assets/images/live/highlights/uk-tour-2019.jpg",
-      "event": {
+      "image": "assets/images/live-carousel/2019-uk-tour-bristol-london.webp",
+      "name": {
         "en": "UK Tour",
-        "it": "Tour nel Regno Unito"
+        "it": "UK Tour"
       },
-      "location": {
-        "en": "Bristol & London, UK",
-        "it": "Bristol e Londra, Regno Unito"
+      "place": {
+        "en": "Bristol / London",
+        "it": "Bristol / Londra"
       },
-      "year": "2019",
-      "alt": {
-        "en": "Red Light Skyscraper performing live during the 2019 UK Tour",
-        "it": "Red Light Skyscraper dal vivo durante il tour nel Regno Unito del 2019"
-      }
+      "year": "2019"
     },
     {
-      "image": "assets/images/live/highlights/concretion-2022.jpg",
-      "event": {
-        "en": "CONCRETION Festival",
-        "it": "CONCRETION Festival"
+      "image": "assets/images/live-carousel/2022-concretion-festival-aquileia.webp",
+      "name": {
+        "en": "Concretion Festival",
+        "it": "Concretion Festival"
       },
-      "location": {
-        "en": "Aquileia, Italy",
-        "it": "Aquileia, Italia"
+      "place": {
+        "en": "Aquileia",
+        "it": "Aquileia"
       },
-      "year": "2022",
-      "alt": {
-        "en": "Red Light Skyscraper live at CONCRETION Festival in 2022",
-        "it": "Red Light Skyscraper dal vivo al CONCRETION Festival nel 2022"
-      }
+      "year": "2022"
     },
     {
-      "image": "assets/images/live/highlights/calibro35-2022.png",
-      "event": {
-        "en": "Calibro 35 plays Morricone",
-        "it": "Calibro 35 plays Morricone"
-      },
-      "location": {
-        "en": "Italy",
-        "it": "Italia"
-      },
-      "year": "2022",
-      "alt": {
-        "en": "Red Light Skyscraper opening the debut tour of Calibro 35 plays Morricone in 2022",
-        "it": "Red Light Skyscraper in apertura del tour di debutto di Calibro 35 plays Morricone nel 2022"
-      }
-    },
-    {
-      "image": "assets/images/live/highlights/arezzo-wave-2022.jpg",
-      "event": {
+      "image": "assets/images/live-carousel/2022-arezzo-wave-final-teatro-comunale.webp",
+      "name": {
         "en": "Arezzo Wave Final",
         "it": "Finale Arezzo Wave"
       },
-      "location": {
-        "en": "Teatro Comunale, Cavriglia",
-        "it": "Teatro Comunale, Cavriglia"
+      "place": {
+        "en": "Teatro Comunale, Arezzo",
+        "it": "Teatro Comunale, Arezzo"
       },
-      "year": "2022",
-      "alt": {
-        "en": "Red Light Skyscraper live at the Arezzo Wave Final in 2022",
-        "it": "Red Light Skyscraper dal vivo alla finale di Arezzo Wave nel 2022"
-      }
+      "year": "2022"
     },
     {
-      "image": "assets/images/live/highlights/corte-dei-miracoli-2025.jpg",
-      "event": {
+      "image": "assets/images/live-carousel/2025-corte-dei-miracoli-siena.webp",
+      "name": {
         "en": "Corte dei Miracoli",
         "it": "Corte dei Miracoli"
       },
-      "location": {
-        "en": "Siena, Italy",
-        "it": "Siena, Italia"
+      "place": {
+        "en": "Siena",
+        "it": "Siena"
       },
-      "year": "2025",
-      "alt": {
-        "en": "Red Light Skyscraper live at Corte dei Miracoli in 2025",
-        "it": "Red Light Skyscraper dal vivo al Corte dei Miracoli nel 2025"
-      }
+      "year": "2025"
+    },
+    {
+      "image": "assets/images/live-carousel/2022-calibro-35-morricone-siena.webp",
+      "name": {
+        "en": "Calibro 35 / Morricone",
+        "it": "Calibro 35 / Morricone"
+      },
+      "place": {
+        "en": "Siena",
+        "it": "Siena"
+      },
+      "year": "2022"
     }
   ]
 }
