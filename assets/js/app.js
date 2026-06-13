@@ -1,6 +1,7 @@
 const state = {
   site: null,
   concerts: [],
+  carousel: { index: 0, timer: null },
   lang: localStorage.getItem("rls-lang") || "en"
 };
 
@@ -160,16 +161,72 @@ function renderVideos() {
   });
 }
 
-function renderHighlights() {
-  const grid = $("#live-highlights");
-  if (!grid) return;
-  grid.innerHTML = state.site.highlights.map(item => `
-    <article class="highlight-card reveal">
-      <strong>${item.year}</strong>
-      <h4>${item.title[state.lang]}</h4>
-      <p>${item.text[state.lang]}</p>
+function renderLiveCarousel() {
+  const track = $("#live-carousel-track");
+  const dots = $("#live-carousel-dots");
+  const prev = $("#live-carousel-prev");
+  const next = $("#live-carousel-next");
+  const slides = state.site.highlightSlides || [];
+  if (!track || !dots || !prev || !next || !slides.length) return;
+
+  const currentIndex = Math.min(state.carousel.index || 0, slides.length - 1);
+  state.carousel.index = currentIndex;
+
+  track.innerHTML = slides.map((slide, index) => `
+    <article class="live-slide" aria-hidden="${index === currentIndex ? "false" : "true"}">
+      <img src="${slide.image}" alt="${slide.alt[state.lang]}" loading="lazy">
+      <div class="live-slide-caption">
+        <div class="live-slide-copy">
+          <h4 class="live-slide-event">${slide.event[state.lang]}</h4>
+          <p class="live-slide-location">${slide.location[state.lang]}</p>
+        </div>
+        <span class="live-slide-year">${slide.year}</span>
+      </div>
     </article>
   `).join("");
+
+  dots.innerHTML = slides.map((slide, index) => `
+    <button type="button" class="${index === currentIndex ? "is-active" : ""}" aria-label="Go to slide ${index + 1}"></button>
+  `).join("");
+
+  const slideEls = Array.from(track.children);
+  const dotEls = Array.from(dots.querySelectorAll("button"));
+
+  function updateCarousel(index) {
+    state.carousel.index = (index + slides.length) % slides.length;
+    track.style.transform = `translateX(-${state.carousel.index * 100}%)`;
+    slideEls.forEach((slide, i) => slide.setAttribute("aria-hidden", i === state.carousel.index ? "false" : "true"));
+    dotEls.forEach((dot, i) => dot.classList.toggle("is-active", i === state.carousel.index));
+  }
+
+  function startAutoplay() {
+    stopAutoplay();
+    state.carousel.timer = window.setInterval(() => updateCarousel(state.carousel.index + 1), 5000);
+  }
+
+  function stopAutoplay() {
+    if (state.carousel.timer) {
+      clearInterval(state.carousel.timer);
+      state.carousel.timer = null;
+    }
+  }
+
+  prev.onclick = () => { updateCarousel(state.carousel.index - 1); startAutoplay(); };
+  next.onclick = () => { updateCarousel(state.carousel.index + 1); startAutoplay(); };
+  dotEls.forEach((dot, index) => {
+    dot.onclick = () => { updateCarousel(index); startAutoplay(); };
+  });
+
+  const shell = track.closest(".live-carousel-shell");
+  if (shell) {
+    shell.onmouseenter = stopAutoplay;
+    shell.onmouseleave = startAutoplay;
+    shell.onfocusin = stopAutoplay;
+    shell.onfocusout = startAutoplay;
+  }
+
+  updateCarousel(currentIndex);
+  startAutoplay();
 }
 
 function formatDate(iso) {
@@ -217,7 +274,7 @@ function renderDynamic() {
   renderFeaturedTracks();
   renderDiscography();
   renderVideos();
-  renderHighlights();
+  renderLiveCarousel();
   renderConcertTable();
   observeReveals();
 }
