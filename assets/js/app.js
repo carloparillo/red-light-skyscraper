@@ -160,67 +160,6 @@ function renderVideos() {
   });
 }
 
-
-function renderLiveCarousel() {
-  const mount = $("#live-carousel");
-  if (!mount || !state.site.liveCarousel) return;
-  if (liveCarouselTimer) window.clearInterval(liveCarouselTimer);
-
-  const slides = state.site.liveCarousel.map((item, idx) => {
-    const name = item.name[state.lang] || item.name.en || "Live";
-    const place = item.place[state.lang] || item.place.en || "";
-    const active = idx === liveCarouselIndex ? " is-active" : "";
-    const alt = `${name} — ${place}, ${item.year}`;
-    return `
-      <article class="live-slide${active}" data-live-slide="${idx}" aria-hidden="${idx === liveCarouselIndex ? "false" : "true"}">
-        <img src="${item.image}" alt="${alt}" loading="${idx === 0 ? "eager" : "lazy"}">
-        <div class="live-caption">
-          <span class="live-caption-name">${name}</span>
-          <span class="live-caption-meta">${place} · ${item.year}</span>
-        </div>
-      </article>
-    `;
-  }).join("");
-
-  const dots = state.site.liveCarousel.map((_, idx) => `
-    <button class="live-carousel-dot${idx === liveCarouselIndex ? " is-active" : ""}" type="button" data-live-dot="${idx}" aria-label="Go to live photo ${idx + 1}"></button>
-  `).join("");
-
-  mount.innerHTML = `
-    <div class="live-carousel-track">${slides}</div>
-    <button class="live-carousel-arrow live-carousel-prev" type="button" data-live-prev aria-label="${state.lang === "it" ? "Foto precedente" : "Previous photo"}">‹</button>
-    <button class="live-carousel-arrow live-carousel-next" type="button" data-live-next aria-label="${state.lang === "it" ? "Foto successiva" : "Next photo"}">›</button>
-    <div class="live-carousel-dots" aria-hidden="true">${dots}</div>
-  `;
-
-  const showSlide = next => {
-    const count = state.site.liveCarousel.length;
-    liveCarouselIndex = (next + count) % count;
-    mount.querySelectorAll(".live-slide").forEach((slide, idx) => {
-      const active = idx === liveCarouselIndex;
-      slide.classList.toggle("is-active", active);
-      slide.setAttribute("aria-hidden", active ? "false" : "true");
-    });
-    mount.querySelectorAll(".live-carousel-dot").forEach((dot, idx) => {
-      dot.classList.toggle("is-active", idx === liveCarouselIndex);
-    });
-  };
-
-  const restartTimer = () => {
-    if (liveCarouselTimer) window.clearInterval(liveCarouselTimer);
-    liveCarouselTimer = window.setInterval(() => showSlide(liveCarouselIndex + 1), 5200);
-  };
-
-  mount.querySelector("[data-live-prev]")?.addEventListener("click", () => { showSlide(liveCarouselIndex - 1); restartTimer(); });
-  mount.querySelector("[data-live-next]")?.addEventListener("click", () => { showSlide(liveCarouselIndex + 1); restartTimer(); });
-  mount.querySelectorAll("[data-live-dot]").forEach(dot => {
-    dot.addEventListener("click", () => { showSlide(Number(dot.dataset.liveDot)); restartTimer(); });
-  });
-  mount.addEventListener("mouseenter", () => liveCarouselTimer && window.clearInterval(liveCarouselTimer));
-  mount.addEventListener("mouseleave", restartTimer);
-  restartTimer();
-}
-
 function renderHighlights() {
   const grid = $("#live-highlights");
   if (!grid) return;
@@ -278,7 +217,6 @@ function renderDynamic() {
   renderFeaturedTracks();
   renderDiscography();
   renderVideos();
-  renderLiveCarousel();
   renderHighlights();
   renderConcertTable();
   observeReveals();
