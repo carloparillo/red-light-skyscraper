@@ -603,10 +603,16 @@ h1, h2, h3, h4, h5, h6 {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  border: 1px solid rgba(255,255,255,.12);
+  position: relative;
+  box-sizing: border-box;
+  flex: 0 0 38px;
+  padding: 0 !important;
+  line-height: 0;
+  border: 1px solid rgba(255,255,255,.12) !important;
   border-radius: 999px;
   background: rgba(255,255,255,.035);
   transition: transform .2s ease, border-color .2s ease, background .2s ease;
+  overflow: hidden;
 }
 .social-link:hover,
 .social-link:focus-visible {
@@ -619,7 +625,13 @@ h1, h2, h3, h4, h5, h6 {
   width: 18px;
   height: 18px;
   display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  object-fit: contain;
   opacity: .92;
+  margin: 0;
 }
 .visually-hidden {
   position: absolute;
