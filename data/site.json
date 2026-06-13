@@ -330,7 +330,8 @@
       "cookieTitle": "Cookie preferences",
       "cookieText": "We use essential cookies to make this website work. With your consent, we may also use analytics cookies to understand how visitors interact with the site. You can accept, reject or change your preferences at any time.",
       "cookieAccept": "Accept analytics",
-      "cookieReject": "Reject"
+      "cookieReject": "Reject",
+      "creditsPrefix": "Photo credits:"
     },
     "it": {
       "metaTitle": "Red Light Skyscraper — Post-rock strumentale dalla Tuscany",
@@ -394,7 +395,8 @@
       "cookieTitle": "Preferenze cookie",
       "cookieText": "Utilizziamo cookie tecnici necessari al funzionamento del sito. Con il tuo consenso, potremmo utilizzare anche cookie analitici per capire come i visitatori interagiscono con il sito. Puoi accettare, rifiutare o modificare le preferenze in qualsiasi momento.",
       "cookieAccept": "Accetta analytics",
-      "cookieReject": "Rifiuta"
+      "cookieReject": "Rifiuta",
+      "creditsPrefix": "Crediti foto:"
     }
   }
 }

@@ -412,6 +412,16 @@ cite{display:block;margin-top:1rem;color:var(--red);font-style:normal}
 .site-footer img{width:58px;margin:0 auto 1.2rem}
 .footer-links{display:flex;flex-wrap:wrap;gap:.9rem;justify-content:center;margin-bottom:1.2rem}
 .site-footer p{max-width:900px;margin:.35rem auto}
+.credits-line a {
+  color: var(--text);
+  border-bottom: 1px solid rgba(223,36,40,.55);
+}
+.credits-line a:hover,
+.credits-line a:focus-visible {
+  color: #fff;
+  border-bottom-color: var(--red);
+}
+
 .reveal{opacity:0;transform:translateY(20px);transition:opacity .75s ease, transform .75s ease}
 .reveal.visible{opacity:1;transform:none}
 
