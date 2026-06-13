@@ -3,7 +3,7 @@
   "brand": {
     "name": "Red Light Skyscraper",
     "email": "redlight.skyscraper@gmail.com",
-    "location": "Siena, Italy"
+    "location": "Tuscany, Italy"
   },
   "links": {
     "bandcamp": "https://redlightskyscraper.bandcamp.com/album/red-light-skyscraper",
@@ -269,7 +269,7 @@
   ],
   "i18n": {
     "en": {
-      "metaTitle": "Red Light Skyscraper — Instrumental Post-Rock from Siena, Italy",
+      "metaTitle": "Red Light Skyscraper — Instrumental Post-Rock from Tuscany, Italy",
       "metaDescription": "Official website of Red Light Skyscraper: instrumental post-rock soundscapes, live audiovisual performances, music, videos, tour archive, press kit and booking.",
       "nav": {
         "experience": "Experience",
@@ -280,7 +280,7 @@
         "about": "About",
         "press": "Press"
       },
-      "heroKicker": "Instrumental post-rock soundscapes from Siena, Italy",
+      "heroKicker": "Instrumental post-rock soundscapes from Tuscany, Italy",
       "heroTitle": "A cinematic live experience in sound and image.",
       "heroText": "Red Light Skyscraper blends cinematic tension, explosive dynamics and emotional melodies into wordless journeys shaped by sound, light and visuals.",
       "ctaListen": "Listen",
@@ -333,7 +333,7 @@
       "cookieReject": "Reject"
     },
     "it": {
-      "metaTitle": "Red Light Skyscraper — Post-rock strumentale da Siena",
+      "metaTitle": "Red Light Skyscraper — Post-rock strumentale dalla Tuscany",
       "metaDescription": "Sito ufficiale dei Red Light Skyscraper: paesaggi sonori post-rock strumentali, performance audiovisive, musica, video, archivio live, press kit e booking.",
       "nav": {
         "experience": "Esperienza",
@@ -344,7 +344,7 @@
         "about": "Chi siamo",
         "press": "Press"
       },
-      "heroKicker": "Paesaggi sonori post-rock strumentali da Siena, Italia",
+      "heroKicker": "Paesaggi sonori post-rock strumentali dalla Tuscany",
       "heroTitle": "Un’esperienza live cinematografica tra suono e immagine.",
       "heroText": "Red Light Skyscraper fonde tensione cinematografica, dinamiche esplosive e melodie emotive in viaggi senza parole costruiti attraverso suono, luce e visual.",
       "ctaListen": "Ascolta",

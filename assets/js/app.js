@@ -325,12 +325,16 @@ function showCookieBanner(force = false) {
   const banner = $("#cookie-banner");
   if (!banner) return;
   const choice = localStorage.getItem(COOKIE_CHOICE_KEY);
-  banner.hidden = !force && (choice === "accepted" || choice === "rejected");
+  const shouldShow = force || !(choice === "accepted" || choice === "rejected");
+  banner.classList.toggle("is-visible", shouldShow);
+  banner.setAttribute("aria-hidden", shouldShow ? "false" : "true");
 }
 
 function hideCookieBanner() {
   const banner = $("#cookie-banner");
-  if (banner) banner.hidden = true;
+  if (!banner) return;
+  banner.classList.remove("is-visible");
+  banner.setAttribute("aria-hidden", "true");
 }
 
 function acceptAnalyticsCookies() {
@@ -345,13 +349,21 @@ function rejectAnalyticsCookies() {
 }
 
 function setupCookieConsent() {
-  $$('[data-cookie-accept]').forEach(btn => btn.addEventListener("click", acceptAnalyticsCookies));
-  $$('[data-cookie-reject]').forEach(btn => btn.addEventListener("click", rejectAnalyticsCookies));
-  $$('[data-cookie-settings]').forEach(btn => btn.addEventListener("click", () => showCookieBanner(true)));
+  document.addEventListener("click", event => {
+    const target = event.target.closest("[data-cookie-accept], [data-cookie-reject], [data-cookie-settings]");
+    if (!target) return;
+    if (target.matches("[data-cookie-accept]")) acceptAnalyticsCookies();
+    if (target.matches("[data-cookie-reject]")) rejectAnalyticsCookies();
+    if (target.matches("[data-cookie-settings]")) showCookieBanner(true);
+  });
+  window.RLSCookies = {
+    open: () => showCookieBanner(true),
+    accept: acceptAnalyticsCookies,
+    reject: rejectAnalyticsCookies
+  };
   if (localStorage.getItem(COOKIE_CHOICE_KEY) === "accepted") {
     loadGoogleAnalytics();
   }
-  showCookieBanner();
 }
 
 async function init() {
@@ -370,8 +382,9 @@ async function init() {
   setupSpotify();
   setupArchiveFilter();
   setupLanguageButtons();
-  setupCookieConsent();
   setLanguage(state.lang);
+  setupCookieConsent();
+  showCookieBanner();
 }
 
 init().catch(err => {
