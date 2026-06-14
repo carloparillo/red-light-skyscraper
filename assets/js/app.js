@@ -214,7 +214,7 @@ const livePhotoMeta = {
   "2022-Arezzo-Wave-Final-Teatro-Comunale": {
     year: "2022",
     event: "Arezzo Wave Final",
-    place: "Teatro Comunale, Arezzo"
+    place: "Arezzo"
   },
   "2025-Corte-dei-Miracoli-Siena": {
     year: "2025",
