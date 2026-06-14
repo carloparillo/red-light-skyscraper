@@ -17,6 +17,14 @@ const liveCarouselImages = [
 let liveCarouselIndex = 0;
 let liveCarouselTimer = null;
 
+const liveCarouselImageStyles = {
+  "2019-UK-Tour-Bristol-London": { position: "50% 52%", fit: "cover" },
+  "2022-Concretion-Festival-Aquileia": { position: "50% 46%", fit: "contain" },
+  "2022-Calibro-35-Morricone-Siena": { position: "50% 50%", fit: "cover" },
+  "2022-Arezzo-Wave-Final-Teatro-Comunale": { position: "43% 48%", fit: "cover" },
+  "2025-Corte-dei-Miracoli-Siena": { position: "50% 50%", fit: "cover" }
+};
+
 
 function getNested(obj, path) {
   return path.split(".").reduce((acc, key) => acc && acc[key], obj);
@@ -241,11 +249,25 @@ function parseLivePhoto(path) {
   };
 }
 
+function getLiveCarouselImageStyle(path) {
+  const stem = cleanImageStem(path);
+  const portrait = portraitLivePhotoStems.has(stem);
+  const config = liveCarouselImageStyles[stem] || {};
+  return {
+    fit: config.fit || (portrait ? "contain" : "cover"),
+    position: config.position || "50% 50%"
+  };
+}
+
 function setLiveCarouselSlide(index) {
   const track = $("#live-carousel-track");
   if (!track) return;
   liveCarouselIndex = (index + liveCarouselImages.length) % liveCarouselImages.length;
-  track.style.transform = `translateX(-${liveCarouselIndex * 100}%)`;
+  $$(".live-carousel-slide", track).forEach((slide, slideIndex) => {
+    const isActive = slideIndex === liveCarouselIndex;
+    slide.classList.toggle("active", isActive);
+    slide.setAttribute("aria-hidden", String(!isActive));
+  });
   $$(".live-carousel-dot").forEach((dot, dotIndex) => {
     dot.classList.toggle("active", dotIndex === liveCarouselIndex);
   });
@@ -264,8 +286,10 @@ function renderLiveCarousel() {
 
   track.innerHTML = liveCarouselImages.map((src, index) => {
     const meta = parseLivePhoto(src);
+    const stem = cleanImageStem(src);
+    const portrait = portraitLivePhotoStems.has(stem);
     return `
-      <figure class="live-carousel-slide${portraitLivePhotoStems.has(cleanImageStem(src)) ? " is-portrait" : ""}">
+      <figure class="live-carousel-slide${portrait ? " is-portrait" : ""}${index === 0 ? " active" : ""}" aria-hidden="${index === 0 ? "false" : "true"}">
         <img src="${src}" alt="${meta.event} live performance, ${meta.place}, ${meta.year}" loading="${index === 0 ? "eager" : "lazy"}">
         <figcaption class="live-carousel-overlay">
           <strong>${meta.event}</strong>
