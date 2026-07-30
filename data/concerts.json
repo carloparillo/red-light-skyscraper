@@ -737,6 +737,14 @@
   },
   {
     "number": 93,
+    "venue": "TVSpenta Dal Vivo – Parco dell’Acqua",
+    "region": "Toscana",
+    "city": "Rapolano Terme",
+    "date": "2024-07-18",
+    "lineup": ""
+  },
+  {
+    "number": 94,
     "venue": "Work in progress",
     "region": "Toscana",
     "city": "Terranuova Bracciolini (AR)",
@@ -744,7 +752,7 @@
     "lineup": "Jacopo, Matteo, Carlo, Mattia"
   },
   {
-    "number": 94,
+    "number": 95,
     "venue": "Bard House Gipsy Club",
     "region": "Lazio",
     "city": "Calcata (VT)",
@@ -752,7 +760,7 @@
     "lineup": "Jacopo, Matteo, Carlo, Mattia"
   },
   {
-    "number": 95,
+    "number": 96,
     "venue": "Piazza Postierla",
     "region": "Toscana",
     "city": "Siena",
@@ -760,7 +768,7 @@
     "lineup": "Jacopo, Matteo, Carlo, Mattia"
   },
   {
-    "number": 96,
+    "number": 97,
     "venue": "Corte dei Miracoli",
     "region": "Toscana",
     "city": "Siena",
